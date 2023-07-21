@@ -1,9 +1,9 @@
 import Header from "components/Header";
-import { Container } from "@mui/material";
 import TasksPage from "components/Tasks";
-import { getLocalStorageTasks } from "lib/helpers";
-import { useEffect, useContext } from "react";
 import { AppContext } from "context/appContext";
+import { getLocalStorageTasks } from "lib/helpers";
+import { useContext, useEffect } from "react";
+import { Container } from "@mui/material";
 
 function HomePage() {
   const { setTasks } = useContext(AppContext);

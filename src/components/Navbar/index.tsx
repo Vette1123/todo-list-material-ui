@@ -2,6 +2,7 @@ import * as React from "react";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
+import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
@@ -75,7 +76,18 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              hi
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/weather"
+                sx={{
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                Weather
+              </Typography>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -95,10 +107,32 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            Sadge
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} />
-
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/weather"
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                Weather
+              </Typography>
+            </Button>
+          </Box>
           <Box sx={{ flexGrow: 0 }}>
             <ThemeToggler />
           </Box>
