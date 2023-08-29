@@ -46,4 +46,5 @@ export interface Weather {
   id: number;
   name: string;
   cod: number;
+  timezone_name?: string;
 }
